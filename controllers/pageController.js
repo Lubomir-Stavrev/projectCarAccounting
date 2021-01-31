@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     pageService.getAll().then(result => {
 
         res.render('home', { title: 'Home', cars: result });
-        console.log(result);
+
     })
 })
 
@@ -18,13 +18,17 @@ router.get('/create', (req, res) => {
 router.get('/details/:id', async(req, res) => {
 
     let car = await pageService.getOne(req.params.id);
-    console.log(car);
-    res.render('details', { title: 'details', car })
 
+    res.render('details', { title: 'details', car })
+})
+
+router.get('/delete(/:id)?', async(req, res) => {
+    await pageService.deleteCar(req.params.id)
+    res.redirect('/')
 })
 
 router.post('/create', (req, res) => {
-    console.log(req.body);
+
     pageService.create(req.body);
     res.redirect('/');
 

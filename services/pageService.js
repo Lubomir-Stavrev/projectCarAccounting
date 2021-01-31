@@ -10,6 +10,11 @@ function getOne(id) {
     return Car.findById(id).lean();
 }
 
+function deleteCar(id) {
+    console.log(id)
+    return Car.findByIdAndDelete(id);
+}
+
 function create(data) {
 
     let car = new Car(data);
@@ -21,4 +26,5 @@ module.exports = {
     getAll,
     getOne,
     create,
+    deleteCar
 }
