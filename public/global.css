@@ -42,33 +42,24 @@ a:-webkit-any-link {
     color: white;
 }
 
-#details-Cotainer img {
-    max-width: 500px;
-    width: 300px;
-    max-hight: 600px;
-    border: 2px black solid;
+.custom-Line {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border-bottom: 3px solid #202020;
+    margin-bottom: 50px;
 }
 
-#header {
-    background-color: #2b3035;
-    height: 300px;
-    clip-path: polygon( 0 0, 230% -80%, 68% 72%, 0 48%);
-    font-size: 25px;
-    width: 100%;
-    position: relative;
-    float: right;
-}
-
-#header h1,
-#headerNotHome h1 {
+.form-Title {
     text-align: center;
-    margin-left: 35%;
     font-size: 40px;
-    color: #ffffff;
-    font-family: 'Roboto-bold';
+    color: #202020;
 }
 
-header nav li {
-    display: inline;
-    margin-left: 3%;
+.page-Title {
+    text-align: center;
+    font-size: 40px;
+    color: #202020;
+    margin-bottom: 16px;
 }

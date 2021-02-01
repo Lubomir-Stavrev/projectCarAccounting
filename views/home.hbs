@@ -1,29 +1,25 @@
 
-        <div>
-            <h1>Hello world</h1>
-        </div>
-     <div>
 
- 
-<div class="container">
-  <div class="row">
+        
 
-          {{#each cars}}
-    <div class="col">
-      <div class="car-Container">
-                 <h1>Title:{{model}}</h1>
-            <a href="/details/{{_id}}">
-                 <img class="img-fluid" src="{{imageUrl}}" alt="">
-            </a>
-                 <h3>Year:{{year}}</h3>
-        </div>
-    </div>
-  {{else}}
-  <h1>THere are no cars</h1>
-  {{/each}}
-  </div>
-  
+    <div id="posts">
+        {{#each cars}}
+                <div  class="post">
 
+    <h1>{{model}}</h1>
+    <a href="/details/{{_id}}">
 
+          <img class="product-Image" src={{imageUrl}} alt="">
+    </a>
+    <h2>Year: {{year}}</h2>
+    <h2>Owner: {{owner}}</h2>
+                     <a href="/details/{{_id}}">
+                       <button class="custom-Button">
+                            Details
+                       </button>
+                     </a>
+                </div>
+{{else}}
+<h1>There are no products here...</h1>
+{{/each}}
 
-     </div>

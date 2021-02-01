@@ -1,0 +1,55 @@
+#header {
+    background-color: #2b3035;
+    height: 180px;
+    font-size: 25px;
+    width: 100%;
+    position: relative;
+    float: right;
+}
+
+#header h1 {
+    text-align: center;
+    margin-left: 35%;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Roboto-bold';
+}
+
+header nav li {
+    display: inline;
+    margin-left: 3%;
+}
+
+#header #botton-Nav {
+    background-color: #2b3035;
+    color: #D6ED17FF;
+    border: 2px solid #D6ED17FF;
+    font-size: 20px;
+    font-family: 'Roboto-solid';
+    float: right;
+    margin-right: 27%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    transition: 0.15s all ease;
+}
+
+#header #botton-Nav:hover {
+    background-color: #D6ED17FF;
+    color: #2b3035;
+    border: 2px solid #2b3035;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 2px solid #2b3035;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}

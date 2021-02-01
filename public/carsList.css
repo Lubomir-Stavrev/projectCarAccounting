@@ -1,0 +1,37 @@
+.post {
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    margin: 25px;
+    font-size: 8px;
+}
+
+.product-Image {
+    border: 2px solid #202020;
+    width: 330px;
+    height: 200px;
+}
+
+.product-Image:hover {
+    border: 2px solid #D6ED17FF;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#posts {
+    margin: 0;
+    position: center;
+    text-align: center;
+}
+
+#posts h1 {
+    font-size: 20px;
+}
+
+#posts h2 {
+    font-size: 18px;
+}
