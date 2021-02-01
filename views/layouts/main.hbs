@@ -5,27 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <link href="/site.css" type="text/css" rel="stylesheet">
-    
+      <link href="/logo.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
     
-        <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">
-                    Home
+    <header id="header">
+       <img src="/images/Capture.PNG" id="logo">
+            <nav>
+
+                <ul class="nav-Right">
+                    
+                    <a class="a-Auth" href="/logout">
+                        <li>Logout</li>
                     </a>
-                    </li>
-                <li>
-                    <a href="/create">
-                    Create
+                    
+                    <a class="a-Auth" href="/create">
+                        <li>Create</li>
                     </a>
-                    </li>
-                <li>Ok</li>
-                <li>daa</li>
-            </ul>
-        </nav>
+                    
+                    <a class="a-Auth" href="/profile" style="cursor: pointer;">
+                        <li>profile</li>
+                    </a>
+                    
+                    <a class="a-Auth" href="/login">
+                        <li>Login</li>
+                    </a>
+                    <a class="a-Auth" href="/register">
+                        <li>Register</li>
+                    </a>
+                    
+                </ul>
+            </nav>
+            <nav class="menu-Left">
+                <ul >
+                    <a class="a-Header" href="/">
+                        <li>Home</li>
+                    </a>
+                    <a class="a-Header" href="/aboutPage">
+                        <li>About</li>
+                    </a>
+                    <a class="a-Header" href="/contactPage">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+            <h1>CarsManager</h1>
+
+            <a href="/allCars">
+                <button id="botton-Nav" type="">
+                    Cars
+                </button>
+            </a>
+
+
         </header>
 
         

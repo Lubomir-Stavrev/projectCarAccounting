@@ -1,12 +1,45 @@
 body {
-    margin: 0;
+    font-family: 'Roboto';
+    background: #ffffff;
 }
 
-.car-Container img {
-    max-width: 200px;
-    width: 100px;
-    max-hight: 300px;
-    border: 2px black solid;
+body {
+    margin: 0px;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.a-Header:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.a-Header:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#nav-Right {
+    margin-right: 10%;
+}
+
+.a-Auth {
+    float: right;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-right: 15px;
+}
+
+.a-Header:hover {
+    color: white;
+}
+
+.a-Auth:hover {
+    color: white;
 }
 
 #details-Cotainer img {
@@ -14,4 +47,28 @@ body {
     width: 300px;
     max-hight: 600px;
     border: 2px black solid;
+}
+
+#header {
+    background-color: #2b3035;
+    height: 300px;
+    clip-path: polygon( 0 0, 230% -80%, 68% 72%, 0 48%);
+    font-size: 25px;
+    width: 100%;
+    position: relative;
+    float: right;
+}
+
+#header h1,
+#headerNotHome h1 {
+    text-align: center;
+    margin-left: 35%;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Roboto-bold';
+}
+
+header nav li {
+    display: inline;
+    margin-left: 3%;
 }

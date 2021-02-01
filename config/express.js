@@ -10,6 +10,7 @@ function setupExpress(app) {
     app.set('view engine', 'hbs');
 
     app.use(express.static('public'));
+    app.use(express.static('images'));
 
     app.use(express.urlencoded({
         extended: true
