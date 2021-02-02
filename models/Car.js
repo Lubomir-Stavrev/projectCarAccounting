@@ -27,6 +27,7 @@ const carScheme = new mongoose.Schema({
         required: true,
         validate: /^https?/,
     },
+    createdAt: { type: Date, default: Date.now },
     parts: [{
         type: mongoose.Types.ObjectId,
         ref: 'Parts'
