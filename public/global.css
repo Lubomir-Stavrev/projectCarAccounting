@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto';
+    font-family: 'Yusei Magic';
     background: #ffffff;
 }
 
@@ -51,15 +51,22 @@ a:-webkit-any-link {
     margin-bottom: 50px;
 }
 
-.form-Title {
-    text-align: center;
-    font-size: 40px;
-    color: #202020;
+.container {
+    margin-top: 270px;
+    color: #181818;
+}
+
+.custom-Line {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    border-bottom: 3px solid #202020;
+    margin-bottom: 30px;
 }
 
 .page-Title {
     text-align: center;
     font-size: 40px;
-    color: #202020;
     margin-bottom: 16px;
 }

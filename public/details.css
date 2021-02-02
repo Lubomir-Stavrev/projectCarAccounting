@@ -1,0 +1,17 @@
+#details-Container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#details-Image {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#details-Image img {
+    max-width: 800px;
+    max-height: 600px;
+    width: 650px;
+    height: 400px;
+    border: 2px solid #2b3035;
+}

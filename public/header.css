@@ -1,10 +1,13 @@
-#header {
+div #header {
     background-color: #2b3035;
     height: 180px;
     font-size: 25px;
     width: 100%;
     position: relative;
+    top: 0px;
+    margin-top: 0;
     float: right;
+    position: absolute;
 }
 
 #header h1 {
@@ -33,7 +36,13 @@ header nav li {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 4px;
-    transition: 0.15s all ease;
+    transition: 0.55s all ease;
+    -webkit-transition: 0.55s all ease;
+    -moz-transition: 0.55s all ease;
+    -ms-transition: 0.55s all ease;
+    -o-transition: 0.55s all ease;
+    z-index: 100;
+    vertical-align: top;
 }
 
 #header #botton-Nav:hover {
@@ -46,10 +55,19 @@ header nav li {
     padding-bottom: 10px;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.23s all ease;
     transform: scale(1.1);
     border: 2px solid #2b3035;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.23s all ease;
+    -moz-transition: 0.23s all ease;
+    -ms-transition: 0.23s all ease;
+    -o-transition: 0.23s all ease;
 }
