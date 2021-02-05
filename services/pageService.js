@@ -8,16 +8,16 @@ async function getAll() {
 async function getOne(id) {
     let car = await Car.findById(id).lean();
 
-    let month = '' + car.createdAt.getMonth() + 1;
-    let day = '' + car.createdAt.getDate();
-    let year = car.createdAt.getFullYear();
-
-    if (month.length < 2)
-        month = '0' + month;
-    if (day.length < 2)
-        day = '0' + day;
-
-    car.createdAt = [year, month, day].join('-');
+    if (car.createdAt) {
+        let month = '' + car.createdAt.getMonth() + 1;
+        let day = '' + car.createdAt.getDate();
+        let year = car.createdAt.getFullYear();
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+        car.createdAt = [year, month, day].join('-');
+    }
     return await car;
 }
 

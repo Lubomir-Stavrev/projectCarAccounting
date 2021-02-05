@@ -32,6 +32,14 @@ header nav li {
     margin-left: 3%;
 }
 
+header nav li:hover {
+    display: inline;
+    margin-left: 3%;
+    color: #D6ED17FF;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+}
+
 #header #botton-Nav {
     background-color: #2b3035;
     color: #D6ED17FF;

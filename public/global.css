@@ -60,7 +60,7 @@ a:-webkit-any-link {
     content: "";
     display: block;
     margin: 0 auto;
-    width: 40%;
+    width: 25%;
     border-bottom: 3px solid #202020;
     margin-bottom: 30px;
 }

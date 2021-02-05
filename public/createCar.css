@@ -1,0 +1,76 @@
+.create-Container {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-Container label {
+    font-size: 20px;
+}
+
+.create-Inputs {
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px;
+    border: 2px solid #2b3035;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.create-Inputs:hover {
+    border: 2px solid #D6ED17FF;
+}
+
+.create-Inputs:focus {
+    outline: 2px solid #D6ED17FF;
+    border: 2px solid #D6ED17FF;
+}
+
+#create-Button {
+    background-color: #2b3035;
+    color: #D6ED17FF;
+    border: 2px solid #D6ED17FF;
+    font-size: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    transition: 0.55s all ease;
+    -webkit-transition: 0.55s all ease;
+    -moz-transition: 0.55s all ease;
+    -ms-transition: 0.55s all ease;
+    -o-transition: 0.55s all ease;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-top: 20px;
+}
+
+#create-Button:hover {
+    cursor: pointer;
+    background-color: #D6ED17FF;
+    color: #2b3035;
+    border: 2px solid #2b3035;
+    font-size: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    transition: 0.55s all ease;
+    -webkit-transition: 0.55s all ease;
+    -moz-transition: 0.55s all ease;
+    -ms-transition: 0.55s all ease;
+    -o-transition: 0.55s all ease;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

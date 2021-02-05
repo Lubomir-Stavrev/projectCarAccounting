@@ -1,23 +1,30 @@
 
     
-    <div>
+    <div class="create-Container">
         <div>
-            <h1>Hello world from create</h1>
+            <div class="page-Title">Create Car</div>
+            <div class="custom-Line"></div>
 
             <form action="/create" method="POST">
-                <label for="fname">Car Owner:</label><br>
-  <input type="text" name="owner" ><br>
-  <label for="lname">Car Year:</label><br>
-  <input type="text" name="year" ><br><br>
-  <label for="fname">Car Type:</label><br>
-  <input type="text" name="type" ><br>
-  <label for="lname">Car Model:</label><br>
-  <input type="text" name="model" ><br><br>
-  <label for="lname">Car Description:</label><br>
-  <input type="text" name="description" ><br><br>
-    <label for="lname">Car Image Url:</label><br>
-  <input type="text" name="imageUrl" ><br><br>
-  <input type="submit" value="Submit">
+                <label for="fname">Owner</label><br>
+  <input class="create-Inputs" type="text" name="owner" ><br>
+
+  <label for="lname">Year</label><br>
+  <input class="create-Inputs" type="text" name="year" ><br>
+
+  <label for="fname">Type</label><br>
+  <input class="create-Inputs" type="text" name="type" ><br>
+
+  <label for="lname">Model</label><br>
+  <input class="create-Inputs" type="text" name="model" ><br>
+
+  <label for="lname">Description</label><br>
+  <input class="create-Inputs" type="text" name="description" ><br>
+
+    <label for="lname">Image Url</label><br>
+  <input class="create-Inputs" type="url" name="imageUrl" ><br>
+
+  <input type="submit" id="create-Button" value="Submit">
             </form>
         </div>
     </div>
