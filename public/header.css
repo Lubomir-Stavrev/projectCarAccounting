@@ -12,6 +12,18 @@ div #header {
     height: 320px;
 }
 
+.menu-Right {
+    font-size: 20px;
+    float: right;
+    display: flex;
+    margin-right: 10%;
+    margin-top: -5%;
+}
+
+.menu-Right a {
+    margin-left: 10%;
+}
+
 svg {
     position: absolute;
     bottom: 0;
