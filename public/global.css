@@ -70,3 +70,15 @@ a:-webkit-any-link {
     font-size: 40px;
     margin-bottom: 16px;
 }
+
+.errorBox {
+    border: #2b3035;
+    border-radius: 5px;
+    color: #2b3035;
+    background-color: #FF4136;
+    text-align: center;
+}
+
+.errorBox p {
+    font-size: 25px;
+}

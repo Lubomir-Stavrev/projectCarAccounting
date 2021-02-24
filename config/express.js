@@ -1,5 +1,7 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
+const cookieParser = require('cookie-parser');
+const auth = require('../middlewares/auth');
 
 function setupExpress(app) {
 
@@ -11,10 +13,12 @@ function setupExpress(app) {
 
     app.use(express.static('public'));
     app.use(express.static('images'));
-
+    app.use(cookieParser());
     app.use(express.urlencoded({
         extended: true
     }));
+
+    app.use(auth);
 }
 
 module.exports = setupExpress;

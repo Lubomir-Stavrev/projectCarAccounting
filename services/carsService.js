@@ -27,7 +27,7 @@ function deleteCar(id) {
 }
 
 function create(data) {
-
+    console.log(data);
     let car = new Car(data);
     return car.save();
 }

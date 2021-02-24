@@ -1,9 +1,13 @@
 const { Router } = require('express');
 
-const pageController = require('./controllers/pageController');
+const homeController = require('./controllers/homeController');
+const authController = require('./controllers/authController');
+const carsController = require('./controllers/carsController');
 
 const router = Router();
 
-router.use(pageController);
+router.use('/', homeController);
+router.use('/auth', authController);
+router.use('/cars', carsController);
 
 module.exports = router;

@@ -5,7 +5,14 @@
             <div class="page-Title">Create Car</div>
             <div class="custom-Line"></div>
 
-            <form action="/create" method="POST">
+            <form  method="POST">
+
+{{#if error}}
+<div class="errorBox">
+    <p>{{error.message}}</p>
+</div>
+{{/if}}
+
                 <label for="fname">Owner</label><br>
   <input class="create-Inputs" type="text" name="owner" ><br>
 

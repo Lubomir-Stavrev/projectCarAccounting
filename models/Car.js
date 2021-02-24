@@ -25,7 +25,7 @@ const carScheme = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: true,
-        validate: /^https?/,
+        validate: [/^https?/, 'Image should start with http or https !'],
     },
     createdAt: { type: Date, default: Date.now },
     parts: [{

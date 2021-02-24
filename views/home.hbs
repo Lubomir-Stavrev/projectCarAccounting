@@ -7,19 +7,19 @@
                 <div  class="post">
 
     <h1>{{model}}</h1>
-    <a href="/details/{{_id}}">
+    <a href="/cars/details/{{_id}}">
 
           <img class="product-Image" src={{imageUrl}} alt="">
     </a>
     <h2>Year: {{year}}</h2>
     <h2>Owner: {{owner}}</h2>
-                     <a href="/details/{{_id}}">
+                     <a href="/cars/details/{{_id}}">
                        <button class="details-Nav-Button">
                             Details
                        </button>
                      </a>
                 </div>
 {{else}}
-<h1>There are no products here...</h1>
+<h1>There are no cars here...</h1>
 {{/each}}
 

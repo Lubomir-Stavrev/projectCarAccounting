@@ -29,19 +29,28 @@
                         <li>Contact</li>
                     </a>
                 </ul>
-
                 <ul class="menu-Right">
-                    <a class="a-Header" href="/register">
+{{#if isAuth}}
+    <a class="a-Header" href="/auth/logout">
+                        <li>Hello, {{user.username}}.</li>
+                    </a>
+
+      <a class="a-Header" href="/auth/logout">
+                        <li>Logout</li>
+                    </a>
+{{else}}
+                    <a class="a-Header" href="/auth/register">
                         <li>Register</li>
                     </a>
-                    <a class="a-Header" href="/login">
+                    <a class="a-Header" href="/auth/login">
                         <li>Login</li>
                     </a>
+                {{/if}}
                 </ul>
 
             </nav>
             <h1>CarsManager</h1>
-            <a href="/create" onclick="soundPlay()">
+            <a href="/cars/create" onclick="soundPlay()">
                 <button id="botton-Nav" type="">
                     Add Car
                 </button>
