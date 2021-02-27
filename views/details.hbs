@@ -19,10 +19,23 @@
 
     <h2>Year: {{car.year}}</h2>
 <br>
+<div>
+      <button class="custom-Button">Like</button>
+      <button class="custom-Button">Edit</button>
+</div>
+<br>
+<br>
+<div>
+      <button class="custom-Button">Buy</button>
+      <button onclick="showCommentSection(event)" onclick="document.getElementById('comment-Section').scrollIntoView(false);" class="custom-Button">{{sectionCondition}}See Comments</button>
+</div>
+<br>
 <h2>Description</h2>
     <div class="custom-Line"></div>
 <h3>{{car.description}}</h3>
     
+
+<div id="comment-Container">
     <h2>Comments</h2>
 <div class="custom-Line"></div>
 
@@ -41,3 +54,26 @@
   
 </div>
 </div>
+</div>
+
+<script>
+    function showCommentSection(e) {
+    if (e) {
+
+        e.preventDefault();
+    }
+
+    let commentSection = document.getElementById('comment-Container');
+
+    if (commentSection.style.display == 'block') {
+        e.target.textContent = 'See Comments'
+        commentSection.style.display = 'none'
+    } else {
+        e.target.textContent = 'Hide Comments'
+        commentSection.style.display = 'block'
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+}
+
+
+</script>

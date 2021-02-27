@@ -84,6 +84,8 @@ a:-webkit-any-link {
 }
 
 .custom-Button {
+    margin-top: 15px;
+    margin-bottom: 10px;
     background-color: #2b3035;
     color: #D6ED17FF;
     border: 2px solid #D6ED17FF;
@@ -114,14 +116,6 @@ a:-webkit-any-link {
     transition: 0.23s all ease;
     transform: scale(1);
     border: 2px solid #2b3035;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     -webkit-transition: 0.23s all ease;
     -moz-transition: 0.23s all ease;
     -ms-transition: 0.23s all ease;
