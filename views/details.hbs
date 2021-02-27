@@ -5,12 +5,39 @@
 
 <div id="details-Container">
     <div id="details-Image">
-    
-    <img src="{{car.imageUrl}}">
+        <img src="{{car.imageUrl}}">
     </div>
-    <h1>{{car.createdAt}}</h1>
-    <h1>{{car.type}}</h1>
-    <h1>{{car.year}}</h1>
-    <h1>{{car.description}}</h1>
+
+    <h1>Details</h1>
+    <div class="custom-Line"></div>
+
+    <h2>Owner: {{car.owner}}</h2>
+
+    <h2>Created At: {{car.createdAt}}</h2>
+
+    <h2>Type: {{car.type}}</h2>
+
+    <h2>Year: {{car.year}}</h2>
+<br>
+<h2>Description</h2>
+    <div class="custom-Line"></div>
+<h3>{{car.description}}</h3>
+    
+    <h2>Comments</h2>
+<div class="custom-Line"></div>
+
+    <div class="comment-Form">
+  <section onload="scrollToEnd(event)" id="comment-Section">
+
+  </section>
+  <div id="comment-Text-Button">
+
+  <textarea id="comment-Area" cols="70" rows="4">
+  </textarea>
+  <a onclick="navigateHandler(event)" href="/login">
+    <button class="custom-Button">Comment</button>
+  </a>
+  </div>
+  
 </div>
 </div>

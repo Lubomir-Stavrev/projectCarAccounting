@@ -15,3 +15,21 @@
     height: 400px;
     border: 2px solid #2b3035;
 }
+
+.comment-Form {
+    border: 3px solid #202020;
+    display: inline-block;
+}
+
+#comment-Section {
+    overflow-y: auto;
+    max-height: 300px;
+    min-height: 300px;
+    text-align: left;
+    border-bottom: 1px solid #202020;
+}
+
+#comment-Container {
+    text-align: center;
+    display: none;
+}

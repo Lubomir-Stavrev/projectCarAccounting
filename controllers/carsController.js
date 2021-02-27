@@ -24,7 +24,6 @@ router.post('/create', (req, res) => {
 router.get('/details/:id', async(req, res) => {
 
     let car = await carsService.getOne(req.params.id);
-    console.log(car.createdAt);
     res.render('details', { title: 'details', car })
 })
 

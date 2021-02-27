@@ -1,4 +1,5 @@
 let Car = require('../models/Car');
+const dateFormat = require('dateformat');
 
 async function getAll() {
     let allCars = await Car.find({}).lean();
@@ -9,14 +10,7 @@ async function getOne(id) {
     let car = await Car.findById(id).lean();
 
     if (car.createdAt) {
-        let month = '' + car.createdAt.getMonth() + 1;
-        let day = '' + car.createdAt.getDate();
-        let year = car.createdAt.getFullYear();
-        if (month.length < 2)
-            month = '0' + month;
-        if (day.length < 2)
-            day = '0' + day;
-        car.createdAt = [year, month, day].join('-');
+        car.createdAt = dateFormat(car.createdAt, "dd-mm-yyyy");
     }
     return await car;
 }
