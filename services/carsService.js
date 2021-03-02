@@ -12,6 +12,7 @@ async function getOne(id) {
     if (car.createdAt) {
         car.createdAt = dateFormat(car.createdAt, "dd-mm-yyyy");
     }
+
     return await car;
 }
 
@@ -26,6 +27,18 @@ function create(data) {
     return car.save();
 }
 
+function editCar(data, id) {
+
+    return Car.findByIdAndUpdate(id, data)
+        .then(res => {
+
+
+            return { res, status: 302 };
+        }).catch(err => {
+            err.status = 403;
+            return err;
+        })
+}
 
 
 
@@ -33,5 +46,6 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteCar
+    deleteCar,
+    editCar
 }

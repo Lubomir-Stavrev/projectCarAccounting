@@ -21,15 +21,42 @@ router.post('/create', (req, res) => {
 
 })
 
-router.get('/details/:id', async(req, res) => {
+router.get('/edit/:id', async(req, res) => {
 
+    let car = await carsService.getOne(req.params.id);
+    res.render('edit', car);
+})
+
+
+router.get('/details/:id', async(req, res) => {
+    console.log('Here')
     let car = await carsService.getOne(req.params.id);
     res.render('details', { title: 'details', car })
 })
 
-router.get('/delete(/:id)?', async(req, res) => {
-    await carsService.deleteCar(req.params.id)
-    res.redirect('/')
+
+router.post('/edit/:id', (req, res) => {
+
+    carsService.editCar(req.body, req.params.id)
+        .then(editedCar => {
+            console.log(editedCar);
+            res.redirect(editedCar.status, `/details/${req.params.id}`);
+        }).catch(err => {
+            res.status(err.status);
+            res.render('edit', { error: err });
+
+        })
+
+})
+
+router.get('/delete/:id', async(req, res) => {
+    try {
+        await carsService.deleteCar(req.params.id)
+        res.redirect('/')
+
+    } catch (error) {
+        res.redirect(`details/${req.params.id}`);
+    }
 })
 
 module.exports = router;
