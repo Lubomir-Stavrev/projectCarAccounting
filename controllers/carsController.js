@@ -40,7 +40,7 @@ router.post('/edit/:id', (req, res) => {
     carsService.editCar(req.body, req.params.id)
         .then(editedCar => {
             console.log(editedCar);
-            res.redirect(editedCar.status, `/details/${req.params.id}`);
+            res.redirect(302, `/cars/details/${req.params.id}`);
         }).catch(err => {
             res.status(err.status);
             res.render('edit', { error: err });
