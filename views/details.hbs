@@ -21,12 +21,14 @@
 <br>
 <div>
       <button class="custom-Button">Like</button>
+      {{#if car.isOwner}}
       <a href="/cars/edit/{{car._id}}">
       <button class="custom-Button">Edit</button>
       </a>
          <a href="/cars/delete/{{car._id}}">
       <button class="custom-Button">Delete</button>
          </a>
+         {{/if}}
 </div>
 <br>
 <br>

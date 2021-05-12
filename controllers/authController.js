@@ -11,6 +11,7 @@ router.get('/register', (req, res) => {
 
 router.post('/register', async(req, res) => {
 
+    console.log(req.body);
     if (req.body.password != req.body.repeatPassword) {
 
         res.render('register', { error: { message: 'Passwords should be equal!' } })

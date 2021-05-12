@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link href="/global.css" type="text/css" rel="stylesheet">
-      <link href="/logo.css" type="text/css" rel="stylesheet">
-      <link href="/carsList.css" type="text/css" rel="stylesheet">
-      <link href="/header.css" type="text/css" rel="stylesheet">
-      <link href="/details.css" type="text/css" rel="stylesheet">
-      <link href="/footer.css" type="text/css" rel="stylesheet">
-      <link href="/createCar.css" type="text/css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="/global.css" type="text/css" rel="stylesheet">
+        <link href="/logo.css" type="text/css" rel="stylesheet">
+        <link href="/carsList.css" type="text/css" rel="stylesheet">
+        <link href="/header.css" type="text/css" rel="stylesheet">
+        <link href="/details.css" type="text/css" rel="stylesheet">
+        <link href="/footer.css" type="text/css" rel="stylesheet">
+        <link href="/createCar.css" type="text/css" rel="stylesheet">
 
-      <script defer src="../../onDom/show.js"></script>
-    
-</head>
-<body>
-    <div>
-    <header id="header">
-       <img src="/Capture.PNG" id="logo">
-            <nav >
-                <ul class="menu-Left">
-                    <a class="a-Header" href="/">
-                        <li>Home</li>
-                    </a>
-                    <a class="a-Header" href="/aboutPage">
-                        <li>About</li>
-                    </a>
-                    <a class="a-Header" href="/contactPage">
-                        <li>Contact</li>
-                    </a>
-                </ul>
-                <ul class="menu-Right">
-{{#if isAuth}}
-    <a class="a-Header" href="/auth/logout">
-                        <li>Hello, {{user.username}}.</li>
-                    </a>
+        <script defer src="../../onDom/show.js"></script>
 
-      <a class="a-Header" href="/auth/logout">
-                        <li>Logout</li>
-                    </a>
-{{else}}
-                    <a class="a-Header" href="/auth/register">
-                        <li>Register</li>
-                    </a>
-                    <a class="a-Header" href="/auth/login">
-                        <li>Login</li>
-                    </a>
-                {{/if}}
-                </ul>
+    </head>
+    <body>
+        <div>
+            <header id="header">
+                <img src="/Capture.PNG" id="logo">
+                <nav>
+                    <ul class="menu-Left">
+                        <a class="a-Header" href="/">
+                            <li>Home</li>
+                        </a>
+                        <a class="a-Header" href="/aboutPage">
+                            <li>About</li>
+                        </a>
+                        <a class="a-Header" href="/contactPage">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                    <ul class="menu-Right">
+                        {{#if isAuth}}
+                        <a class="a-Header" href="/auth/logout">
+                            <li>Hello, {{user.username}}.</li>
+                        </a>
 
-            </nav>
-            <h1>CarsManager</h1>
-            <a href="/cars/create" onclick="soundPlay()">
-                <button id="botton-Nav" type="">
-                    Add Car
-                </button>
-            </a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" preserveAspectRatio="none">
-    <circle fill="white" cx="0" cy="100" r="100" />
-    <circle fill="white" cx="200" cy="100" r="100" />
-        </header>
-</div>
-        <div class="container">
-        {{{body}}}
+                        <a class="a-Header" href="/auth/logout">
+                            <li>Logout</li>
+                        </a>
+                        {{else}}
+                        <a class="a-Header" href="/auth/register">
+                            <li>Register</li>
+                        </a>
+                        <a class="a-Header" href="/auth/login">
+                            <li>Login</li>
+                        </a>
+                        {{/if}}
+                    </ul>
 
-        </div>
-         <footer id="footer">
+                </nav>
+                <h1>CarNex</h1>
+                <a href="/cars/create" onclick="soundPlay()">
+                    <button id="botton-Nav" type="">
+                        Add Car
+                    </button>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"
+                    preserveAspectRatio="none">
+                    <circle fill="white" cx="0" cy="100" r="100" />
+                        <circle fill="white" cx="200" cy="100" r="100" />
+                        </header>
+                    </div>
+                    <div class="container">
+                        {{{body}}}
 
-            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quia corporis veritatis sunt eaque beatae!</h4>
-        </footer>
-    
-</body>
-</html>
+                    </div>
+                    <footer id="footer">
+
+                        <h4>Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Earum quia corporis veritatis sunt eaque
+                            beatae!</h4>
+                    </footer>
+
+                </body>
+            </html>

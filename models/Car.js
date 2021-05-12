@@ -28,11 +28,15 @@ const carScheme = new mongoose.Schema({
         validate: [/^https?/, 'Image should start with http or https !'],
     },
     createdAt: { type: Date, default: Date.now },
+    ownerId: {
+        type: String,
+        required: true
+    },
     parts: [{
         type: mongoose.Types.ObjectId,
-        ref: 'Parts'
+        ref: 'Parts',
+        required: true,
     }]
-
 })
 
 module.exports = mongoose.model('car', carScheme);

@@ -10,7 +10,10 @@ router.get('/create', (req, res) => {
 
 router.post('/create', (req, res) => {
 
-    carsService.create(req.body).then(car => {
+    let obj = req.body;
+    Object.assign(obj, { ownerId: req.res.user._id })
+
+    carsService.create(obj).then(car => {
         res.redirect('/');
 
     }).catch(err => {
@@ -29,8 +32,11 @@ router.get('/edit/:id', async(req, res) => {
 
 
 router.get('/details/:id', async(req, res) => {
-    console.log('Here')
+
     let car = await carsService.getOne(req.params.id);
+    if (car.ownerId) {
+        car.isOwner = car.ownerId == req.res.user._id ? true : false;
+    }
     res.render('details', { title: 'details', car })
 })
 
