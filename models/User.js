@@ -21,7 +21,10 @@ const UserScheme = new mongoose.Schema({
         type: String,
         required: true,
         validate: [isStrongPassword, 'The password is too weak']
-    }
+    },
+    likedCars: [{
+        type: mongoose.Types.ObjectId,
+    }]
 })
 
 

@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const carsService = require('../services/carsService');
+const authService = require('../services/authService');
 
 
 router.get('/create', (req, res) => {
@@ -34,8 +35,14 @@ router.get('/edit/:id', async(req, res) => {
 router.get('/details/:id', async(req, res) => {
 
     let car = await carsService.getOne(req.params.id);
-    if (car.ownerId) {
+    let isLiked = false;
+    if (req.res.user) {
+        isLiked = await authService.isLiked(req.res.user._id, req.params.id);
+    }
+
+    if (car.ownerId && req.res.user || isLiked) {
         car.isOwner = car.ownerId == req.res.user._id ? true : false;
+        car.isLikedByThisUser = isLiked;
     }
     res.render('details', { title: 'details', car })
 })
@@ -45,7 +52,7 @@ router.post('/edit/:id', (req, res) => {
 
     carsService.editCar(req.body, req.params.id)
         .then(editedCar => {
-            console.log(editedCar);
+
             res.redirect(302, `/cars/details/${req.params.id}`);
         }).catch(err => {
             res.status(err.status);
@@ -62,6 +69,18 @@ router.get('/delete/:id', async(req, res) => {
 
     } catch (error) {
         res.redirect(`details/${req.params.id}`);
+    }
+})
+
+router.get('/like/:id', async(req, res) => {
+    try {
+
+        await carsService.likeCar(req.params.id, req.res.user._id)
+        res.redirect(`/cars/details/${req.params.id}`)
+
+    } catch (error) {
+        console.log(error)
+        res.redirect(`/cars/details/${req.params.id}`);
     }
 })
 

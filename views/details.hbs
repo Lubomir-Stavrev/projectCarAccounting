@@ -20,7 +20,18 @@
     <h2>Year: {{car.year}}</h2>
 <br>
 <div>
+    {{#if car.likes}}
+    <h1>{{car.likes}}</h1>
+    {{/if}}
+    {{#if isAuth}}
+    {{#if car.isLikedByThisUser}}
+    <span>Already liked</span>
+    {{else}}
+    <a href="/cars/like/{{car._id}}">
       <button class="custom-Button">Like</button>
+    </a>
+    {{/if}}
+    {{/if}}
       {{#if car.isOwner}}
       <a href="/cars/edit/{{car._id}}">
       <button class="custom-Button">Edit</button>

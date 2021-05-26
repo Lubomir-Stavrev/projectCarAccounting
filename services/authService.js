@@ -35,9 +35,27 @@ const login = async({ email, password }) => {
 
 }
 
+const isLiked = async(uId, carId) => {
+
+    let userCars = await User.findById(uId).lean();
+
+    let isLiked = false;
+
+    if (userCars.likedCars) {
+        userCars.likedCars.forEach(el => {
+            if (el == carId) {
+                isLiked = true;
+            }
+        })
+    }
+
+    return await isLiked;
+}
+
 
 
 module.exports = {
     login,
-    register
+    register,
+    isLiked
 }

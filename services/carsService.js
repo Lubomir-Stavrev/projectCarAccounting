@@ -1,4 +1,5 @@
 let Car = require('../models/Car');
+let User = require('../models/User');
 const dateFormat = require('dateformat');
 
 async function getAll() {
@@ -17,7 +18,7 @@ async function getOne(id) {
 }
 
 function deleteCar(id) {
-    console.log(id)
+
     return Car.findByIdAndDelete(id);
 }
 
@@ -40,6 +41,33 @@ function editCar(data, id) {
         })
 }
 
+async function likeCar(id, uId) {
+
+    let carInfo = await Car.findById(id).lean()
+    let userInfo = await User.findById(uId).lean();
+    if (userInfo.likedCars) {
+        userInfo.likedCars.push(id);
+        await User.findByIdAndUpdate(uId, await userInfo);
+    }
+
+    delete carInfo._id;
+    if (carInfo.likes >= 0) {
+
+        carInfo.likes = Number(carInfo.likes) + 1;
+
+    }
+
+    return await Car.findByIdAndUpdate(id, await carInfo)
+        .then(res => {
+
+            return { res, status: 302 };
+        }).catch(err => {
+            console.log(err)
+            err.status = 403;
+            return err;
+        })
+}
+
 
 
 module.exports = {
@@ -47,5 +75,6 @@ module.exports = {
     getOne,
     create,
     deleteCar,
-    editCar
+    editCar,
+    likeCar
 }

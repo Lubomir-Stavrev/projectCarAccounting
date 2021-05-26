@@ -32,6 +32,12 @@ const carScheme = new mongoose.Schema({
         type: String,
         required: true
     },
+    likes: {
+        type: Number,
+        default: 0,
+        maxlength: 3,
+        minlength: 1
+    },
     parts: [{
         type: mongoose.Types.ObjectId,
         ref: 'Parts',
