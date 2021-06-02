@@ -17,7 +17,7 @@ to do is, open it, with whatever IDE you are using.
 and wait a while.
 
 **Third** Type `npm start` in the terminal so it can start the server. \
-Then open [http://localhost:3000] \
+Then open [http://localhost:5000] \
 to view it.
 
 
